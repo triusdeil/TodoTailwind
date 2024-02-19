@@ -1,7 +1,7 @@
 export default function TodoFilter({ changeFilter, filter }) {
     return (
         <section className="container mx-auto px-4 mt-8">
-            <div className="bg-white p-4 rounded-md flex justify-center gap-4">
+            <div className="dark:bg-gray-800 transition-all duration-1000 bg-white p-4 rounded-md flex justify-center gap-4">
                 <button
                     onClick={() => changeFilter("all")}
                     className={`${

@@ -14,7 +14,7 @@ const initialState = [
 
 function App() {
     const [todos, setTodos] = useState(initialState);
-    const [filter, setFilter] = useState("completed");
+    const [filter, setFilter] = useState("all");
 
     const filteredTodos = () => {
         switch(filter) {
@@ -59,7 +59,7 @@ function App() {
     const changeFilter = (filter) => setFilter(filter)
 
     return (
-        <div className="bg-[url('./assets/images/bg-mobile-light.jpg')] bg-no-repeat bg-contain bg-gray-300 min-h-screen">
+        <div className="bg-[url('./assets/images/bg-mobile-light.jpg')] bg-no-repeat bg-contain bg-gray-300 min-h-screen dark:bg-gray-900 transition-all duration-1000 dark:bg-[url('./assets/images/bg-mobile-dark.jpg')]">
             <Header />
             <main className="container mx-auto px-4 mt-8">
                 {/*Todo Create */}
@@ -79,7 +79,7 @@ function App() {
 
             <TodoFilter changeFilter={changeFilter} filter={filter} />
 
-            <p className="text-center mt-8">drag and drop</p>
+            <p className="text-center mt-8 dark:text-gray-400">drag and drop</p>
         </div>
     );
 }
